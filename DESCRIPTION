@@ -1,0 +1,34 @@
+Package: GSAO
+Type: Package
+Title: Gene Set Annotation Overlap
+Version: 0.1.0
+Authors@R:
+    c(person("Lilin", "Yang", role = c("aut", "cre"),
+             email = "lilin.yang@uq.net.au"),
+      person("Ahmed", "Mehdi", role = "ctb",
+             email = "a.mehdi@imb.uq.edu.au"))
+Description: A package containing a curated database and enrichment tool to
+    calculate enriched gene set annotations. This package can also extract
+    differentially-expressed genes from Seurat objects and visually display
+    enriched pathways. The functions used in this package are based of those in
+    the `glacier` package.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 4.0)
+RoxygenNote: 7.1.2
+Imports: 
+    magrittr,
+    ggplot2,
+    rlang,
+    dplyr,
+    forcats,
+    purrr,
+    readr,
+    stringr,
+    tibble,
+    tidyr,
+    xml2
+Suggests: 
+    Seurat
