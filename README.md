@@ -19,3 +19,26 @@ results$stats
 ```
 
 Roxygen documentation is available for all functions.
+
+You will be asked to give the path for MSigDB XML file. Please drag the XML file to R console to get the path or alternatively write the path:
+
+Example:
+~/Downloads/msigdb_v7.5.1_files_to_download_locally/msigdb_v7.5.1.xml
+
+To run it for gene list, please provide the gene names or gene names;
+
+```
+input <- process_input_text("IL1B	EGR3	EGR2	CCR1	PTGS2	SLC25A29	RAB12	CXCL1	FOSB	SFRS15	SGK	FRAT2	TRIB1	NGLY1	THOC7	FPRL1	SFRS2IP	TAX1BP1	FLJ42008	GPR109B	TREM1	MAFB	BTBD14A")
+
+results <- compute(input)
+head(results$stats)
+head(results$matches)
+```
+
+For single-cell RNAseq, please provide object processed through Seurat pipeline (normalization, scaling, clustering etc performed. With also a label “grp” indicating the group information.
+
+```
+input_Seurat_object <- readRDS(‘Your Path to Seurat RDS File’)
+```
+
+with input_Seurat_object$seurat_clusters containing the seurat clusters to perform differential expression analyses needed in downstream analyses.
