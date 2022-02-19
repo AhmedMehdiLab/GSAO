@@ -10,14 +10,15 @@ This is a data analysis package allowing the user with a list of genes of intere
 ## Installation
 To install this package, run:
 
-```
+``` r
+# install.packages("remotes")
 remotes::install_github("AhmedMehdiLab/GSAO")
 ```
 
 ## Usage
 To use the package, run:
 
-```
+``` r
 library(GSAO)
 genes <- "GENE1 GENE2 GENE3"       # a gene list separated by spaces or commas
 input <- process_input_text(genes) 
@@ -26,7 +27,7 @@ results <- compute(input)
 
 Statistically enriched annotations are stored in a `tidyverse` `tibble`, and can be viewed with:
 
-```
+``` r
 results$stats
 ```
 
@@ -40,7 +41,7 @@ Example:
 
 To run it for gene list, please provide the gene names or gene names;
 
-```
+``` r
 input <- process_input_text("IL1B	EGR3	EGR2	CCR1	PTGS2	SLC25A29	RAB12	CXCL1	FOSB	SFRS15	SGK	FRAT2	TRIB1	NGLY1	THOC7	FPRL1	SFRS2IP	TAX1BP1	FLJ42008	GPR109B	TREM1	MAFB	BTBD14A")
 
 results <- compute(input)
@@ -50,7 +51,7 @@ head(results$matches)
 
 For single-cell RNAseq, please provide object processed through Seurat pipeline (normalization, scaling, clustering etc performed. With also a label “grp” indicating the group information.
 
-```
+``` r
 input_Seurat_object <- readRDS(‘Your Path to Seurat RDS File’)
 ```
 
