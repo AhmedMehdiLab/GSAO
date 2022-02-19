@@ -1,9 +1,21 @@
 # GSAO
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/AhmedMehdiLab/GSAO/workflows/R-CMD-check/badge.svg)](https://github.com/AhmedMehdiLab/GSAO/actions)
+<!-- badges: end -->
+
 Gene Set Annotation Overlap
 
 This is a data analysis package allowing the user with a list of genes of interest to find enriched annotations of gene sets from MSigDB C7.
 
-To run:
+## Installation
+To install this package, run:
+
+```
+remotes::install_github("AhmedMehdiLab/GSAO")
+```
+
+## Usage
+To use the package, run:
 
 ```
 library(GSAO)
@@ -20,6 +32,7 @@ results$stats
 
 Roxygen documentation is available for all functions.
 
+## Notes
 You will be asked to give the path for MSigDB XML file. Please drag the XML file to R console to get the path or alternatively write the path:
 
 Example:
